@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'Railway-EB';
+  src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+}
+@font-face {
+  font-family: 'Railway-R';
+  src:  url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');;
+}
+@font-face {
+  font-family: 'Railway-B';
+  src: rl('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');;
+}
+@font-face {
+  font-family: 'Railway-M';
+  src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+}

@@ -1,0 +1,179 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: antiquewhite;
+    .breif, .details {
+        border: 1px solid black
+    }
+    .breif {
+        width: 55%;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        ul {
+            list-style-type: none; 
+            font-size: 16px;
+            grid-column: 1 /span 3;
+            margin-bottom: 15%;
+            li {
+                display: inline;
+                font-family: 'Railway-M';
+            }
+            :last-child {
+                font-family: 'Railway-EB';
+                font-weight: bolder;
+            }
+        }
+        .img {
+            grid-column: 2/span 2;
+        }
+        .info {
+            grid-column: 1/span 2;
+            margin-left: 3rem;
+            font-size: 24px;
+            line-height: .5rem;
+            :nth-child(2) {
+                font-family: 'Raleway';
+                font-weight: 800;
+            }
+            :last-child {
+                margin-bottom: 10%;
+                font-family: 'Raleway';
+                font-weight: 400;
+            }
+        }
+        .btn {
+            grid-column: 3/span 1;
+            margin: auto 5%;
+            font-size: 24px;
+            padding-bottom: 4%;
+        }
+        .sliderControl {
+            grid-column: 1 /span 1;
+            .prev {
+                transform: rotate(90deg);
+                margin-bottom: -10%;
+            }
+            .next {
+                transform: rotate(90deg);
+                margin-top: -5%;
+            }
+        }
+    }
+    .details {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7%;
+        padding-bottom: 7%;
+        font-size: 16px;
+        background-color: #ffffff;
+        .first {
+            margin-left: 15%;
+            margin-right: 22%;
+            font-family: 'Raleway';
+            font-weight: 400;
+            :first-child {
+            font-size: 18px;
+            :last-child{
+                font-family: 'Raleway';
+                font-weight: 400;
+            }
+        }}
+        .second {
+            font-size: 16px;
+            margin-left: 0%;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            :first-child {
+                font-size: 18px;
+                margin-bottom: 5%;
+                margin-top: 10%
+            }
+            div span {
+                font-weight: bold;
+                font-family: 'Raleway';
+            }
+            .one {
+                display: grid;
+                grid-template-columns: 34% 50%;
+            }
+            .two {
+                display: grid;
+                grid-template-columns: 26% 50%;
+                ul {
+                    list-style-type: none;
+                    margin-top: -3%;
+                    :first-child {
+                        width: 11rem;
+                    }
+                }
+            }
+            .three{
+                display: grid;
+                grid-template-columns: 35% 56%;
+                
+            }
+        }
+        .third {
+            display: flex;
+            ul {
+                list-style-type: none;
+                margin-top: -5%;
+            }
+        }
+    }
+}
+
+.sliderControl {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: self-start;
+    margin-left: 25%;
+    .prev, .next{
+        background-color: aliceblue;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 80%;
+    }
+    .prev.active, .next.active {
+        background-color: #fff;
+        opacity: 40%;
+    }
+    .prev.disabled, .next.disabled {
+        cursor: no-drop;
+        background-color: #fff;
+        opacity: 60%;
+    }
+    .num {
+        margin-left: -12%;
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            margin-right: 40%;
+            li {
+                border: 1px solid #fff;
+                height: 1rem;
+                width: 0rem;
+                margin-top: .4rem;
+                background-color: #fff;
+                opacity: 80%;
+                cursor: pointer;
+            }
+            li.active {
+                border: 1px solid black;
+                background-color: black;
+            }
+        }
+    }
+}

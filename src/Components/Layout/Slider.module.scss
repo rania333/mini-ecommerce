@@ -1,0 +1,114 @@
+.sliderContent, .sliderControl{
+    flex-grow: 1;
+}
+.sliderImg {
+    flex-grow: 2;
+}
+
+.slider{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    border: 1px solid black;
+    justify-content: space-around;
+    padding: 2% 5%;
+    overflow: hidden;
+    .sliderContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        div {
+            opacity: 0;
+            transition: opacity 1s;
+            position: absolute;
+            top: 35%;
+            &.activeSlide{
+                opacity: 1;
+            }
+            :nth-child(1), :nth-child(3) {
+                font-size: 24px;
+            }
+            :nth-child(3) {
+                margin-bottom: 15%;
+                font-family: 'Raleway';
+                font-weight: 400;
+            }   
+            :nth-child(2){
+                font-size: 48px;
+                font-family: 'Raleway';
+                font-weight: 800;
+            }
+            > p {
+                line-height: 15%;
+            }
+        }
+    };
+    .sliderImg {
+        img {
+            opacity: 0;
+            position: absolute;
+            transition: opacity 1s;
+            &.activeSlide{
+                opacity: 1;
+            }
+        }
+    }
+    .sliderControl {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        position: absolute;
+        top: 60%;
+        right: 5%;
+        width: 16%;
+        .prev, .next{
+            background-color: aliceblue;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 80%;
+        }
+        .prev.active, .next.active {
+            background-color: #fff;
+            opacity: 40%;
+        }
+        .prev.disabled, .next.disabled {
+            cursor: no-drop;
+            background-color: #fff;
+            opacity: 60%;
+        }
+        .num {
+            margin: 1px -30px;
+            ul {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                margin-left: -4rem;
+                margin-bottom: auto;
+                align-items: unset;
+                margin-right: -2rem;
+                li {
+                    border: 1px solid #fff;
+                    height: 0rem;
+                    width: 1rem;
+                    margin-top: -1rem;
+                    background-color: #fff;
+                    margin-right: 1rem;
+                    opacity: 80%;
+                    cursor: pointer;
+                }
+                li.active {
+                    border: 1px solid black;
+                    background-color: black;
+                }
+            }
+        }
+    }
+}
+
